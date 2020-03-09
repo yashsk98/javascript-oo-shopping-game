@@ -1,4 +1,4 @@
-//object literal initialization
+//Defining the player object - object literal initialization
 
 const name = "unknown";
 const score = 0;
@@ -23,7 +23,7 @@ let player = {
 
 //Constructor function - Prior to ES6
 function Product(id,name,price,expiryDate) {
-    this.id = id; //Demonstrate object literal property value shorthand
+    this.id = id; 
     this.name = name;
     this.price = price;
     this.expiryDate = expiryDate;
@@ -52,6 +52,11 @@ const dateDiff = (date1, date2) => {
     return diffDays;
 };
 
+//Using the prototype to add method to Product
+Product.prototype.getDetails = function () {
+    return `Product Code: ${this.code} Product Name: ${this.name}`;
+}
+
 
 function MagicProduct(id,name,price,expiryDate,points,isBonus) {
     Product.call(this, id, name, price, expiryDate);
@@ -62,9 +67,6 @@ function MagicProduct(id,name,price,expiryDate,points,isBonus) {
 
 MagicProduct.prototype = Object.create(Product.prototype); // Work with prototypes for inheritance, Use Object.create() and specify a prototype
 
-Product.prototype.getDetails = function () {
-    return `Product Code: ${this.code} Product Name: ${this.name}`;
-}
 
 //ES6 class -- Rating
 class Rating {
@@ -357,6 +359,20 @@ function doAction(o, d) {
 
 
 main();
+
+exports.loadMasterData = loadMasterData;
+exports.getProduct = getProduct;
+exports.findProductById = findProductById;
+exports.findPointsToBill = findPointsToBill;
+exports.findPointsForExpDate = findPointsForExpDate;
+exports.claculateBill = claculateBill;
+exports.claculatePoints = claculatePoints;
+exports.init = init;
+exports.shop = shop;
+exports.rateAndExit = rateAndExit;
+exports.exitLost = exitLost;
+exports.exitWon = exitWon;
+exports.main = main;
 
 
 
