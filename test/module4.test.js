@@ -42,7 +42,7 @@ describe('Shopping Master game - Implement points calculation logic', function (
             
             //console.log(calculateBillNode.init.body.body.length);
 
-            test.assert(calculateBillNode.init.body.body.length > 0, "Have you implemented calculateBill() function?");
+            test.assert(calculateBillNode.init.body.body.length > 0, "Have you implemented `calculateBill()` function?");
 
             const isReturn = (calculateBillNode.init.body &&
                             calculateBillNode.init.body.body &&
@@ -89,7 +89,7 @@ describe('Shopping Master game - Implement points calculation logic', function (
     describe("Find points for expiry date of the product ", () => {
         it('Should find and return the points awarded for the number of days to expire, of a product in `findPointsForExpDate()` function. @find-points-for-expDate', function () {
 
-            test.assert(findPointsForExpDateNode.init.body.body.length > 0, "Have you implemented findPointsForExpDate() function?");
+            test.assert(findPointsForExpDateNode.init.body.body.length > 0, "Have you implemented `findPointsForExpDate()` function?");
             
             const pr1 = new shoppinggame.Product(1, 'test1', 100, oneYearLater);
 

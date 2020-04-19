@@ -36,7 +36,7 @@ describe('Shopping Master game - Implement the shopping functionality', function
                         anonymFunc.body.body[0].expression.right.name == 'name') ? true : false;
 
 
-            test.assert(playerNameSet, "Have you set the `name` property of the `player` object to the user entered name where the question `What's your name?` is asked from the user in the `init()` function?");
+            test.assert(playerNameSet, "Have you set the `name` property of the `player` object to the user entered name where the question 'What's your name'? is asked from the user in the `init()` function?");
 
         });
     });
@@ -65,7 +65,7 @@ describe('Shopping Master game - Implement the shopping functionality', function
                     shopFuncNode.init.body.body[2].declarations[0].init.test.argument.arguments[0].name == 'lastProd' &&
                     shopFuncNode.init.body.body[2].declarations[0].init.test.argument.arguments[1].name == 'undefined')) ? true : false;
 
-            test.assert(objectIsUsed, "Have you used Object.is() method to check the condition (if `lastProd` is `undefined`)?");
+            test.assert(objectIsUsed, "Have you used `Object.is()` method to check the condition (if `lastProd` is `undefined`)?");
 
 
             const isConsequentCorrect = ((shopFuncNode.init.body.body[2].declarations[0].init.consequent &&
@@ -142,7 +142,7 @@ describe('Shopping Master game - Implement the shopping functionality', function
                 shopFuncNode.init.body.body[4].expression.arguments[1].body.body[1].declarations[0].init.arguments[1].value == 'i') ? true : false;
 
 
-            test.assert(regexNoTestCorrect, "Have you set `regexNo` to `new RegExp('n', 'i')`");
+            test.assert(regexNoTestCorrect, "Have you set `regexNo` to `new RegExp('n', 'i')`?");
 
         });
     });
@@ -166,7 +166,7 @@ describe('Shopping Master game - Implement the shopping functionality', function
                             shopFuncNode.init.body.body[4].expression.arguments[1].body.body[2].consequent.body[3].consequent.body[0].expression.arguments[2].properties[0].value.value == 'Shopping Master') ? true : false;
 
 
-            test.assert(statusPropertySet, "Have you defined and set the `status` property in the `player` object with a `String` value of `Shopping Master`?");
+            test.assert(statusPropertySet, "Have you defined and set the `status` property in the `player` object with a `String` value of 'Shopping Master'?");
         });
     });     
 

@@ -92,16 +92,16 @@ describe('Shopping Master game - Define object-types/classes', function () {
     describe("Define the player object", () => {
         it('Should define the player object. @player-object', function () {
 
-            test.assert(shoppinggame.player, "Have you defined and exported a `player` object?");
+            test.assert(shoppinggame.player, "Have you defined a `player` object?");
             test.assert(shoppinggame.name
-                && shoppinggame.name == 'unknown', "Have you defined and exported a constant called `name` & initialised to a value of `unknown`?");
-            test.assert(shoppinggame.score == 0, "Have you defined and exported a constant called `score` & initialised to a value of 0?");
-            test.assert(shoppinggame.items == 0, "Have you defined and exported a constant called `items` & initialised to a value of 0?");
+                && shoppinggame.name == 'unknown', "Have you defined a constant called `name` & initialised to a value of `unknown`?");
+            test.assert(shoppinggame.score == 0, "Have you defined a constant called `score` & initialised to a value of `0`?");
+            test.assert(shoppinggame.items == 0, "Have you defined a constant called `items` & initialised to a value of `0`?");
             test.assert(shoppinggame.player &&
                 (shoppinggame.player.name == 'unknown' &&
                     shoppinggame.player.score == 0 &&
                     shoppinggame.player.items == 0)
-                , "Have you added properties `name`, `score` & `items` to the player object?");
+                , "Have you added properties `name`, `score` & `items` to the `player` object?");
 
         });
     });
@@ -117,9 +117,9 @@ describe('Shopping Master game - Define object-types/classes', function () {
             //console.log(methods);
 
             test.assert(shoppinggame.player &&
-                shoppinggame.player.getCurrentScore, "Have you added a method named `getCurrentScore` to the player object?");
-            test.assert(shoppinggame.player.addPoints, "Have you added a method named `addPoints` to the player object?");
-            test.assert(shoppinggame.player.deductPoints, "Have you added a method named `deductPoints` to the player object?");
+                shoppinggame.player.getCurrentScore, "Have you added three methods out of which there's a method named `getCurrentScore()` to the `player` object?");
+            test.assert(shoppinggame.player.addPoints, "Have you added three methods out of which there's a method named `addPoints()` to the `player` object?");
+            test.assert(shoppinggame.player.deductPoints, "Have you added three methods out of which there's a method named `deductPoints()` to the `player` object?");
 
             let thisUsedIngetCurrentScore = false;
             let thisUsedInaddPoints = false;
@@ -186,9 +186,9 @@ describe('Shopping Master game - Define object-types/classes', function () {
     describe("Define the Product object type", () => {
 
         it('Should define the Product object type. @Product-object', function () {
-            test.assert(shoppinggame.Product, "Have you defined and exported a `Product` object?");
+            test.assert(shoppinggame.Product, "Have you defined a `Product` object type?");
 
-            test.assert(prodNode, "Have you used the constructor function syntax to define Product?");
+            test.assert(prodNode, "Have you used the constructor function syntax to define `Product`?");
 
             test.assert(prodNode.params.length == 4 &&
                 prodNode.params.find(element => element.name == 'id') &&
@@ -208,33 +208,33 @@ describe('Shopping Master game - Define object-types/classes', function () {
             test.assert(prodNode.body.body.find(element => (element.expression.type == 'AssignmentExpression' &&
                 element.expression.left.object &&
                 element.expression.left.object.type == 'ThisExpression' &&
-                element.expression.right.name == 'id')), "Have you initialized `id` property using a this.id = id statement within the constructor function");
+                element.expression.right.name == 'id')), "Have you initialized `id` property using a `this.id = id` statement within the constructor function?");
 
             test.assert(prodNode.body.body.find(element => (element.expression.type == 'AssignmentExpression' &&
                 element.expression.left.object &&
                 element.expression.left.object.type == 'ThisExpression' &&
-                element.expression.right.name == 'name')), "Have you initialized `name` property using a this.name = name statement within the constructor function");
+                element.expression.right.name == 'name')), "Have you initialized `name` property using a `this.name = name` statement within the constructor function?");
 
             test.assert(prodNode.body.body.find(element => (element.expression.type == 'AssignmentExpression' &&
                 element.expression.left.object &&
                 element.expression.left.object.type == 'ThisExpression' &&
-                element.expression.right.name == 'price')), "Have you initialized `price` property using a this.price = price statement within the constructor function");
+                element.expression.right.name == 'price')), "Have you initialized `price` property using a `this.price = price` statement within the constructor function?");
 
             test.assert(prodNode.body.body.find(element => (element.expression.type == 'AssignmentExpression' &&
                 element.expression.left.object &&
                 element.expression.left.object.type == 'ThisExpression' &&
-                element.expression.right.name == 'expiryDate')), "Have you initialized `expiryDate` property using a this.expiryDate = expiryDate statement within the constructor function");
+                element.expression.right.name == 'expiryDate')), "Have you initialized `expiryDate` property using a `this.expiryDate = expiryDate` statement within the constructor function?");
         });
     });
 
     describe("Implement the dateDiff() function", () => {
 
         it('Should implement the dateDiff() function to return the difference between two given dates. @dateDiff-function', function () {
-            test.assert(shoppinggame.dateDiff, "Have you defined and exported a function named `dateDiff`?");
+            test.assert(shoppinggame.dateDiff, "Have you defined a function named `dateDiff()`?");
 
             const ans = shoppinggame.dateDiff(oneYearLater, today);
 
-            test.assert(ans, "Have you completed the `dateDiff` function to return the difference between two given dates in number of days?");
+            test.assert(ans, "Have you completed the `dateDiff()` function to return the difference between two given dates in number of days?");
         });
 
     });
@@ -243,7 +243,7 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
         it('Should use Object.defineProperty() to define property daysToExpire. @Object-defineProperty', function () {
 
-            test.assert(defineProperties, "Have you used Object.defineProperty() syntax to define a new property named daysToExpire?");
+            test.assert(defineProperties, "Have you used `Object.defineProperty()` syntax to define a new property named `daysToExpire`?");
 
         });
     });
@@ -252,7 +252,7 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
         it('Should call and return the dateDiff function in the getter of daysToExpire. @dateDiff-in-get', function () {
 
-            test.assert(shoppinggame.Product, "Have you defined and exported a `Product` object?");
+            test.assert(shoppinggame.Product, "Have you defined a `Product` object type?");
 
             const pr = new shoppinggame.Product(1, 'test', 100, oneYearLater);
 
@@ -262,7 +262,7 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
 
             test.assert(thisUsed && newUsed && pr.daysToExpire >= 0
-                , "Have you called the `dateDiff` function inside the getter with an: arg1: this.expiryDate & arg2: new Date()?");
+                , "Have you called the `dateDiff()` function inside the getter with an: arg1: `this.expiryDate` & arg2: `new Date()`?");
 
         });
     });
@@ -271,11 +271,11 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
         it('Should add a method named getDetails() to Product that returns product details. @getDetails-method', function () {
 
-            test.assert(shoppinggame.Product, "Have you defined and exported a `Product` object?");
+            test.assert(shoppinggame.Product, "Have you defined a `Product` object?");
 
             const pr1 = new shoppinggame.Product(1, 'test1', 100, oneYearLater);
 
-            test.assert(pr1.getDetails, "Have you add a getDetails() method to Product?");
+            test.assert(pr1.getDetails, "Have you add a `getDetails()` method to `Product`?");
 
             const retValue = pr1.getDetails();
             test.assert(retValue === "Product Name: test1 , Product Price: 100", "Have you returned `Product Name: ${this.name} , Product Price: ${this.price}` from the method?")
@@ -285,9 +285,9 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
     describe("Define MagicProduct object type", () => {
 
-        it('Should define and export the MagicProduct object type. @MagicProduct-object', function () {
+        it('Should define the MagicProduct object type. @MagicProduct-object', function () {
 
-            test.assert(magProdNode, "Have you used the constructor function syntax to define MagicProduct?");
+            test.assert(magProdNode, "Have you used the constructor function syntax to define `MagicProduct`?");
 
             test.assert(magProdNode.params.length == 6 &&
                 magProdNode.params.find(element => element.name == 'id') &&
@@ -314,7 +314,7 @@ describe('Shopping Master game - Define object-types/classes', function () {
             const firstStmtIsCall = (bodyLength > 0 &&
                 body[0].expression.type === "CallExpression") ? true : false;
 
-            test.assert(productCallInvocation && firstStmtIsCall, "Have you called the Product class constructor as the 1st statement inside MagicProduct");
+            test.assert(productCallInvocation && firstStmtIsCall, "Have you called the `Product` class constructor as the 1st statement inside `MagicProduct`");
 
             const arguments = productCallInvocation.expression.arguments;
 
@@ -358,11 +358,11 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
         it('Should make the MagicProduct a child of Product. @object-inheritance', function () {
 
-            test.assert(magProdNode, "Have you used the constructor function syntax to define MagicProduct?");
+            test.assert(magProdNode, "Have you used the constructor function syntax to define `MagicProduct`?");
 
             const hasLink = shoppinggame.MagicProduct.prototype instanceof shoppinggame.Product;
 
-            test.assert(hasLink == true, "Have you made the MagicProduct a sub class of Product?");
+            test.assert(hasLink == true, "Have you made the `MagicProduct` a sub class of `Product`?");
 
             // const protoUsed = (objectCreateCall.left && 
             //     objectCreateCall.left.object &&
@@ -376,18 +376,18 @@ describe('Shopping Master game - Define object-types/classes', function () {
             //     objectCreateCall.right.arguments.property &&
             //     objectCreateCall.right.arguments.property.name == 'prototype') ? true : false;
 
-            test.assert(objectCreateCall, "Have you used Object.create(), passing Product.prototype as a parameter to link MagicProduct and Product?");
+            test.assert(objectCreateCall, "Have you used `Object.create()`, passing `Product.prototype` as a parameter to link `MagicProduct` and `Product`?");
 
         });
     });
 
     describe("Define Rating class", () => {
 
-        it('Should define and export a class named Rating. @Rating-class', function () {
+        it('Should define a class named Rating. @Rating-class', function () {
 
-            test.assert(fieldDeclInRatingCls == false, "Have you done a `Field declaration` in the class body? It is an experimental feature according to MDN docs and we suggest you remove it.");
+            test.assert(fieldDeclInRatingCls == false, "Have you done a Field declaration in the class body? It is an experimental feature according to MDN docs and we suggest you remove it.");
 
-            test.assert(ratingClassDecl, "Have you defined a class named `Rating` using the `class` keyword and exported it?");
+            test.assert(ratingClassDecl, "Have you defined a class named `Rating` using the `class` keyword?");
 
 
             const classBody = ratingClassDecl.body.body;
@@ -472,7 +472,7 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
                 test.assert(r.rate != "", "Have you set the `rate` property value in the setter according to the given logic?");
 
-                test.assert(r.rate != "" && r.rate == rr.rate, `Have you set this.rate to a value of ${rr.rate} for the value range: ${rr.range}?`);
+                test.assert(r.rate != "" && r.rate == rr.rate, "Have you set `this.rate` to the correct rate values?");
             }
 
         });

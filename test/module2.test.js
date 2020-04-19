@@ -76,7 +76,7 @@ describe('Shopping Master game - Load master data', function () {
                 ||
                 objVariablePassed ? true : false;
 
-            test.assert(objectKeyUsed && proObjectPassed, "Have you called Object.keys() method, passing a `new Product()` object as the argument?");
+            test.assert(objectKeyUsed && proObjectPassed, "Have you called `Object.keys()` method, passing a `new Product()` object as the argument?");
         });
     });
 
@@ -130,7 +130,7 @@ describe('Shopping Master game - Load master data', function () {
                 ||
                 objVariablePassed ? true : false;
 
-            test.assert(objectKeyUsed && magProObjectPassed, "Have you called Object.keys() method, passing a `new MagicProduct()` object as the argument?");
+            test.assert(objectKeyUsed && magProObjectPassed, "Have you called `Object.keys()` method, passing a `new MagicProduct()` object as the argument?");
         });
     });
 

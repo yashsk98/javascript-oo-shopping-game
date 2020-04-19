@@ -48,7 +48,7 @@ describe('Shopping Master game - Implement game exit functionality', function ()
                             rateAndExitFunNode.init.body.body[0].declarations[0].init.arguments.length == 0) ? true : false;
                             
 
-            test.assert(ratingCreated, "Have you created an object of the `Rating` class and assigned it to a variable named?");
+            test.assert(ratingCreated, "Have you created an object of the `Rating` class and assigned it to a variable named `playerRating`?");
         });
     }); 
 
@@ -88,7 +88,7 @@ describe('Shopping Master game - Implement game exit functionality', function ()
                 rateAndExitFunNode.init.body.body[1].expression.arguments[1].body.body[0].alternate.body[1].declarations[0].init.arguments[2].name == 'playerRating') ? true : false;
 
 
-                test.assert(targetSet, "Have you create a new object named `target` by calling Object.assign() method, passing `{}`, `player` & `playerRating` as the three parameters?");
+                test.assert(targetSet, "Have you created a new object named `target` by calling `Object.assign()` method, passing `{}`, `player` & `playerRating` as the three parameters?");
         });
     });
 
@@ -109,7 +109,7 @@ describe('Shopping Master game - Implement game exit functionality', function ()
                 exitLostNode.init.body.body[0].declarations[0].init.right.callee.property.name == 'getCurrentScore') ? true : false;
                 
 
-            test.assert(pointsToReachSet, "Have you set pointsToReachSet with the value of (500 - player.getCurrentScore())?");
+            test.assert(pointsToReachSet, "Have you set `pointsToReachSet` with a value of `(500 - player.getCurrentScore())`?");
         });
     });
 
