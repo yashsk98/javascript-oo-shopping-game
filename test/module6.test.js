@@ -109,7 +109,7 @@ describe('Shopping Master game - Implement game exit functionality', function ()
                 exitLostNode.init.body.body[0].declarations[0].init.right.callee.property.name == 'getCurrentScore') ? true : false;
                 
 
-            test.assert(pointsToReachSet, "Have you set `pointsToReachSet` with a value of `(500 - player.getCurrentScore())`?");
+            test.assert(pointsToReachSet, "Have you set `pointsToReach` with a value of `(500 - player.getCurrentScore())`?");
         });
     });
 
