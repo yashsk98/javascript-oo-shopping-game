@@ -98,11 +98,11 @@ describe('Shopping Master game - Implement points calculation logic', function (
             const result1 = shoppinggame.findPointsForExpDate(pr1);
             const result2 = shoppinggame.findPointsForExpDate(pr2);
 
-            console.log(`Days to expire pr1 : ` + pr1.daysToExpire);
-            console.log(`Days to expire pr2 : ` + pr2.daysToExpire);
+            //console.log(`Days to expire pr1 : ` + pr1.daysToExpire);
+            //console.log(`Days to expire pr2 : ` + pr2.daysToExpire);
 
-            console.log(result1);
-            console.log(result2);
+            //console.log(result1);
+            //console.log(result2);
 
             test.assert(result2 == 10, "Have you checked and returned 10 if the product has less than 30 days to expire?");
             test.assert(result1 == 0, "Have you checked and returned 0 if the product has more than 30 days to expire (else block)?");
