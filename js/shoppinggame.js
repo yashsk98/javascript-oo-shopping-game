@@ -30,9 +30,10 @@ function Product(id, name, price, expiryDate) {
 
 // Complete the dateDiff function
 const dateDiff = (date1, date2) => {
-    const oneDay = 24 * 60 * 60 * 1000;
-    const diffDays = Math.round(Math.abs((date2 - date1) / oneDay));
-    
+    let timeDiff = Math.abs(date2.getTime() - date1.getTime());
+
+    let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
     return diffDays;
 };
 
