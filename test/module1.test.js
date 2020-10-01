@@ -278,7 +278,6 @@ describe('Shopping Master game - Define object-types/classes', function () {
             test.assert(pr1.getDetails, "Have you add a `getDetails()` method to `Product`?");
 
             const retValue = pr1.getDetails();
-            console.log(retValue);
             test.assert(retValue === "Product Name: test1 , Product Price: 100", "Have you returned `Product Name: ${this.name} , Product Price: ${this.price}` from the method?")
 
         });
@@ -479,6 +478,5 @@ describe('Shopping Master game - Define object-types/classes', function () {
         });
     });
 
-    
 });
 
