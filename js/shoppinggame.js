@@ -66,6 +66,7 @@ class Rating{
     }
 }
 
+
 // Complete the loadProducts function
 const loadProducts = (map, prodId) => {
     let a = new Array();
