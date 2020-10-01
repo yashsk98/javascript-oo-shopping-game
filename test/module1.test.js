@@ -17,11 +17,11 @@ let fieldDeclInRatingCls = false;
 
 try {
     esprima.parseModule(source, {}, function (node) {
-        if (node.type == 'VariableDeclarator' &&
-            node.id.name == 'player' &&
-            node.init.type == 'ObjectExpression') {
+        if (node.type == 'VariableDeclarator'){
+            if(node.id.name == 'player'){
+                if(node.init.type == 'ObjectExpression') {
             playerDef = node;
-        }
+        }}}
 
         if (node.id && node.id.name === "Product" && node.type === "FunctionDeclaration") {
             prodNode = node;
@@ -278,6 +278,7 @@ describe('Shopping Master game - Define object-types/classes', function () {
             test.assert(pr1.getDetails, "Have you add a `getDetails()` method to `Product`?");
 
             const retValue = pr1.getDetails();
+            console.log(retValue);
             test.assert(retValue === "Product Name: test1 , Product Price: 100", "Have you returned `Product Name: ${this.name} , Product Price: ${this.price}` from the method?")
 
         });
@@ -472,7 +473,7 @@ describe('Shopping Master game - Define object-types/classes', function () {
 
                 test.assert(r.rate != "", "Have you set the `rate` property value in the setter according to the given logic?");
 
-                test.assert(r.rate != "" && r.rate == rr.rate, "Have you set `this.rate` to the correct rate values?");
+                test.assert(r.rate != "" && r.rate == rr.rate, "Have you set `this.rate` to the correct rate values? "+i+" "+r.rate);
             }
 
         });
