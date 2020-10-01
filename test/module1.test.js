@@ -479,5 +479,6 @@ describe('Shopping Master game - Define object-types/classes', function () {
         });
     });
 
+    
 });
 
